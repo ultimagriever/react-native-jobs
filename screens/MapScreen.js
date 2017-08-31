@@ -67,4 +67,4 @@ const styles = {
   }
 }
 
-export default connect(({ jobs }) => ({ jobs }), actions)(MapScreen);
+export default connect(null, actions)(MapScreen);
