@@ -60,7 +60,6 @@ class DeckScreen extends Component {
   }
 
   render() {
-    console.log(this.props.jobs);
     return (
       <View style={{ marginTop: 10 }}>
         <Swipe

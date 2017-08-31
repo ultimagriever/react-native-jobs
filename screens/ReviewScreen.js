@@ -66,4 +66,4 @@ const styles = {
   }
 };
 
-export default connect(({ jobs }) => ({ likedJobs: jobs.likedJobs }))(ReviewScreen);
+export default connect(({ likedJobs }) => ({ likedJobs }))(ReviewScreen);
