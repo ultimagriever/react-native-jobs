@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import _ from 'lodash';
-import { FETCH_JOBS, LIKE_JOB } from '../actions/types';
+import {CLEAR_LIKED_JOBS, FETCH_JOBS, LIKE_JOB} from '../actions/types';
 
 export default combineReducers({
   results(state = [], action) {
@@ -15,6 +15,8 @@ export default combineReducers({
     switch (action.type) {
       case LIKE_JOB:
         return _.uniqBy([action.payload, ...state], 'jobkey');
+      case CLEAR_LIKED_JOBS:
+        return [];
       default:
         return state;
     }
