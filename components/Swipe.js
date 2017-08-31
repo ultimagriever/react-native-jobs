@@ -39,13 +39,11 @@ class Swipe extends Component {
       },
       onPanResponderRelease: (event, gesture) => {
         if (gesture.dx > SWIPE_THRESHOLD) {
-          console.log('swipe right!');
           this.forceSwipe('right');
         } else if (gesture.dx < -SWIPE_THRESHOLD) {
-          console.log('swipe left!');
-          this.forceSwipe();
+          this.forceSwipe('left');
         } else {
-          this.resetPosition('left');
+          this.resetPosition();
         }
       }
     });
