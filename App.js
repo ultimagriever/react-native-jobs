@@ -37,6 +37,14 @@ export default class App extends React.Component {
               }
             })
           }
+        },
+        {
+          tabBarPosition: 'bottom',
+          tabBarOptions: {
+            labelStyle: {
+              fontSize: 12
+            }
+          }
         })
       }
     },
